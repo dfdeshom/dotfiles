@@ -173,13 +173,16 @@
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 
-(defun recentf-ido-find-file ()
-  "Find a recent file using ido."
-  (interactive)
-  (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
-    (when file
-      (find-file file))))
-(global-set-key (kbd "C-c f") 'recentf-ido-find-file)
+;; (defun recentf-ido-find-file ()
+;;   "Find a recent file using ido."
+;;   (interactive)
+;;   (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
+;;     (when file
+;;       (find-file file))))
+
+;; (global-set-key (kbd "C-c f") 'recentf-ido-find-file)
+
+(global-set-key (kbd "C-c f") 'helm-recentf)
 
 (setq-default indent-tabs-mode nil)
 
