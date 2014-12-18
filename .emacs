@@ -94,7 +94,6 @@
       (if help (message "%s" help)))))
  
 
-
 ;; auto pep8 for nazis
 (defun pep8ize ()
   "pep8"
@@ -183,11 +182,6 @@
 (global-set-key (kbd "C-c f") 'recentf-ido-find-file)
 
 (setq-default indent-tabs-mode nil)
-
-;; saner kill ring behavior
-;; remap \M-y to improved browse-kill-ring
-;; (require 'browse-kill-ring)
-;; (global-set-key "\M-y" 'browse-kill-ring)
 
 ;; yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
