@@ -5,13 +5,11 @@
 ############################
 
 ########## Variables
+dir=$HOME/code/dotfiles                    # dotfiles directory
+olddir=$HOME/code/dotfiles_old             # old dotfiles backup directory
+files=".emacs .zshrc .gitconfig .screenrc .oh-my-zsh"    # list of files/folders to symlink in homedir
 
 install_dotfiles () {
-    dir=~/code/dotfiles                    # dotfiles directory
-    olddir=~/code/dotfiles_old             # old dotfiles backup directory
-    files=".emacs .zshrc .gitconfig .screenrc .oh-my-zsh"    # list of files/folders to symlink in homedir
-
-
     # create dotfiles_old in homedir
     echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
     mkdir -p $olddir
@@ -26,40 +24,43 @@ install_dotfiles () {
     # then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
     for file in $files; do
         echo "Moving any existing dotfiles from ~ to $olddir"
-        mv ~/$file ~/dotfiles_old/
+        mv ~/$file $olddir
         echo "Creating symlink to $file in home directory."
         ln -s $dir/$file ~/$file
     done
 }
 
 install_zsh () {
-# Test to see if zshell is installed.  If it is:
-if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Clone oh-my-zsh repository from GitHub only if it isn't already present
-    if [[ ! -d $dir/oh-my-zsh/ ]]; then
-        git clone http://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
-    fi
-    # copy custom oh-my-zsh files
-    curl -L https://raw.github.com/dfdeshom/oh-my-zsh-dfdeshom/master/dfdeshom.zsh-theme
-    mv dfdeshom.zsh-theme .oh-my-zsh/themes/
+    # Test to see if zshell is installed.  If it is:
+    echo "Installing oh-my-zsh..."    
+    if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
+        # Clone oh-my-zsh repository from GitHub only if it isn't already present
+        if [[ ! -d $dir/.oh-my-zsh/ ]]; then
+            git clone http://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
+        fi
+        # copy custom oh-my-zsh files
+        echo "Downloading and installing custom 'dfdeshom' theme.."
+        wget -q https://raw.githubusercontent.com/dfdeshom/oh-my-zsh-dfdeshom/master/dfdeshom.zsh-theme
+        mv dfdeshom.zsh-theme .oh-my-zsh/themes/
     
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
+        # Set the default shell to zsh if it isn't currently set to zsh
+        if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+            chsh -s $(which zsh)
+        fi
+    else
+        # If zsh isn't installed, get the platform of the current machine
+        platform=$(uname);
+        # If the platform is Linux, try an apt-get to install zsh and then recurse
+        if [[ $platform == 'Linux' ]]; then
+            sudo apt-get install zsh
+            install_zsh
+        # If the platform is OS X, tell the user to install zsh :)
+        elif [[ $platform == 'Darwin' ]]; then
+            echo "Please install zsh, then re-run this script!"
+            exit
+        fi
     fi
-else
-    # If zsh isn't installed, get the platform of the current machine
-    platform=$(uname);
-    # If the platform is Linux, try an apt-get to install zsh and then recurse
-    if [[ $platform == 'Linux' ]]; then
-        sudo apt-get install zsh
-        install_zsh
-    # If the platform is OS X, tell the user to install zsh :)
-    elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install zsh, then re-run this script!"
-        exit
-    fi
-fi
+    echo 'Done configuring zsh'
 }
 
 install_zsh
