@@ -3,10 +3,14 @@
 # This script creates symlinks from the home directory to any desired dotfiles
 ############################
 
-########## Variables
-dir=$HOME/code/dotfiles                    # dotfiles directory
-olddir=$HOME/code/dotfiles_old             # old dotfiles backup directory
-files=".emacs .zshrc .gitconfig .screenrc .oh-my-zsh"    # list of files/folders to symlink in homedir
+# dotfiles directory
+dir=$HOME/code/dotfiles
+
+# old dotfiles backup directory
+olddir=$HOME/code/dotfiles_old
+
+# list of files/folders to symlink in homedir
+files=".emacs .zshrc .gitconfig .screenrc .hgrc .bashrc .oh-my-zsh"    
 
 install_dotfiles () {
     # create dotfiles_old in homedir
