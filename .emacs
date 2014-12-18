@@ -167,17 +167,8 @@
 (setq pig-indent-level 4)
 (setq pig-version "0.11.0")
 
-;; backup behavior
-(if (file-directory-p "~/.emacs.d/backup")
-    (setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
-    (message "Directory does not exist: ~/.emacs.d/backup"))
-
-;; recent files
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-items 75)
-(setq recentf-max-saved-items 75)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+;; do not make backup files
+(setq make-backup-files nil)
 
 ;;smex
 (require 'smex)
