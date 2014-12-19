@@ -75,18 +75,19 @@
         (local-set-key (kbd "C-c n") 'flymake-goto-next-error)
         (local-set-key (kbd "C-c p") 'flymake-goto-prev-error))))
 
+(defun flymake-create-temp-in-system-tempdir (filename prefix)
+  (make-temp-file (or prefix "flymake")))
 
 (when (load "flymake" t)
-    (defun flymake-pylint-init ()
-      (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                         'flymake-create-temp-inplace))
-             (local-file (file-relative-name
-                          temp-file
-                          (file-name-directory buffer-file-name))))
-        (list "~/.local/bin/epylint" (list local-file))))
-    
-    (add-to-list 'flymake-allowed-file-name-masks
-                 '("\\.py\\'" flymake-pylint-init)))
+  (defun flymake-pyflakes-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-in-system-tempdir))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "pyflakes" (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pyflakes-init)))
 
 (defun ca-flymake-show-help ()
   (when (get-char-property (point) 'flymake-overlay)
