@@ -1,8 +1,8 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "precise64chef11"
-    config.vm.box_url = "https://s3.amazonaws.com/parsely-vagrant/precise64chef11.box"
+    config.vm.box_url = "http://s3.amazonaws.com/parsely-vagrant/precise64chef11.box"
     config.ssh.forward_agent = true
-    config.vm.synced_folder "/home/dfdeshom/code"
+    config.vm.synced_folder "/home/dfdeshom/code", "/home/vagrant/parsely"
 
     #config.vm.network "private_network", ip: "192.168.1.100"
 
