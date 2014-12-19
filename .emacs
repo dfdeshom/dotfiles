@@ -106,6 +106,7 @@
 (add-hook 'python-mode-hook 'auto-complete-mode)
 (add-hook 'python-mode-hook 'pep8ize)
 (add-hook 'python-mode-hook 'linum-mode)
+(add-hook 'python-mode-hook 'semantic-mode)
 (add-hook 'post-command-hook 'ca-flymake-show-help)
 (add-hook 'python-mode-hook 'electric-indent-mode)
 
@@ -172,17 +173,6 @@
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 
-;; (defun recentf-ido-find-file ()
-;;   "Find a recent file using ido."
-;;   (interactive)
-;;   (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
-;;     (when file
-;;       (find-file file))))
-
-;; (global-set-key (kbd "C-c f") 'recentf-ido-find-file)
-
-(global-set-key (kbd "C-c f") 'helm-recentf)
-
 (setq-default indent-tabs-mode nil)
 
 ;; yes or no
@@ -200,8 +190,8 @@
 (global-set-key (kbd "C-x C-b") #'helm-buffers-list)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+(global-set-key (kbd "C-c f") 'helm-recentf)
 ;(global-set-key (kbd "C-x C-f") #'helm-find-files)
-;(global-set-key (kbd "C-x C-r") #'helm-recentf)
 
 ;(helm-mode t)
 ;;(helm-adaptative-mode t)
