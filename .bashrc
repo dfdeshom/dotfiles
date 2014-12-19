@@ -112,7 +112,7 @@ alias cls='clear'
 #alias hop=/home/dfdeshom/.local/bin/hop-python-script
 
 #v-env wrapper
-export WORKON_HOME=$HOME/code/cogtree/venvs/
+export WORKON_HOME=$HOME/code/parsely/venvs/
 source ~/.local/bin/virtualenvwrapper.sh
 
 # colors
