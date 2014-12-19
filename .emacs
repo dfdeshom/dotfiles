@@ -124,9 +124,6 @@
 ;; -------------------- extra nice things --------------------
 (show-paren-mode t)
 
-;; auto-indent with return key
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
 ;; show line numbers
 (global-linum-mode 0)
 (setq linum-format "%d ")
