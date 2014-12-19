@@ -169,6 +169,12 @@
 ;; do not make backup files
 (setq make-backup-files nil)
 
+;; recent files
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 75)
+(setq recentf-max-saved-items 75)
+
 ;;smex
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
