@@ -107,6 +107,7 @@
 (add-hook 'python-mode-hook 'pep8ize)
 (add-hook 'python-mode-hook 'linum-mode)
 (add-hook 'post-command-hook 'ca-flymake-show-help)
+(add-hook 'python-mode-hook 'electric-indent-mode)
 
 (setq py-autopep8-options '("--max-line-length=100"))
 
