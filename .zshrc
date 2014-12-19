@@ -66,7 +66,7 @@ alias ipyspark='IPYTHON=1 pyspark'
 alias cls='clear'
 
 #v-env wrapper
-export WORKON_HOME=$HOME/code/cogtree/venvs/
+export WORKON_HOME=$HOME/code/parsely/venvs/
 source ~/.local/bin/virtualenvwrapper.sh
 
 # colors
