@@ -42,10 +42,12 @@ install_zsh () {
             git clone http://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
         fi
         # copy custom oh-my-zsh files
-        echo "Downloading and installing custom 'dfdeshom' theme.."
-        wget -q https://raw.githubusercontent.com/dfdeshom/oh-my-zsh-dfdeshom/master/dfdeshom.zsh-theme
-        mv dfdeshom.zsh-theme .oh-my-zsh/themes/
-    
+        if [ ! -f ~/.oh-my-zsh/themes/dfdeshom.zsh-theme  ]; then
+            echo "Downloading and installing custom 'dfdeshom' theme.."
+            wget -q https://raw.githubusercontent.com/dfdeshom/oh-my-zsh-dfdeshom/master/dfdeshom.zsh-theme
+            mv dfdeshom.zsh-theme .oh-my-zsh/themes/
+        fi 
+
         # Set the default shell to zsh if it isn't currently set to zsh
         if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
             chsh -s $(which zsh)
