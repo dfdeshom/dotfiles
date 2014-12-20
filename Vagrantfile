@@ -5,7 +5,6 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder "/home/dfdeshom/code", "/home/vagrant/parsely"
 
     #config.vm.network "private_network", ip: "192.168.1.100"
-
     config.vm.provider "virtualbox" do |v|
         # allow software-defined networking
         v.customize ['modifyvm', :id, '--nicpromisc1', 'allow-all']
@@ -15,5 +14,8 @@ Vagrant.configure("2") do |config|
         v.memory = 4096
         # 2 vCPUs
         v.cpus = 2
+        # faster networking
+        v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]   
     end
 end
