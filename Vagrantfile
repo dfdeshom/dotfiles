@@ -16,6 +16,12 @@ Vagrant.configure("2") do |config|
         v.cpus = 2
         # faster networking
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-        v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]   
+        v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+
+        # forward db ports
+        for i in [6379, 27017]
+            config.vm.network :forwarded_port, guest: i, host: i, auto_correct: true
+        end            
+
     end
 end
