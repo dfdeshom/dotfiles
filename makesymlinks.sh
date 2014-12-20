@@ -10,7 +10,7 @@ dir=$HOME/code/dotfiles
 olddir=$HOME/code/dotfiles_old
 
 # list of files/folders to symlink in homedir
-files=".emacs .zshrc .gitconfig .screenrc .hgrc .bashrc .oh-my-zsh .pip"    
+files=".emacs .zshrc .gitconfig .screenrc .hgrc .bashrc .profile .oh-my-zsh .pip"    
 
 install_dotfiles () {
     # create dotfiles_old in homedir
