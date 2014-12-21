@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
         # 4gb of RAM
         v.memory = 4096
-        # 2 vCPUs
-        v.cpus = 2
+        # 1 vCPUs
+        v.cpus = 1
         # faster networking
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
