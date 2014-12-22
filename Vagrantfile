@@ -4,7 +4,8 @@ Vagrant.configure("2") do |config|
     config.ssh.forward_agent = true
     config.vm.synced_folder "/home/dfdeshom/code", "/home/vagrant/parsely"
 
-    #config.vm.network "private_network", ip: "192.168.1.100"
+    config.vm.network "private_network", ip: "10.10.10.10"
+
     config.vm.provider "virtualbox" do |v|
         # allow software-defined networking
         v.customize ['modifyvm', :id, '--nicpromisc1', 'allow-all']
@@ -17,11 +18,5 @@ Vagrant.configure("2") do |config|
         # faster networking
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-
-        # forward db ports
-        for i in [6379, 27017]
-            config.vm.network :forwarded_port, guest: i, host: i, auto_correct: true
-        end            
-
     end
 end
