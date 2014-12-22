@@ -19,7 +19,7 @@
 
 ;; make more packages available with the package installer
 (setq to-install
-      '(python-mode magit yasnippet jedi auto-complete  find-file-in-repository pig-mode markdown-mode clojure-mode virtualenvwrapper smex notify browse-kill-ring py-autopep8  helm))
+      '(python-mode magit  jedi auto-complete  find-file-in-repository pig-mode markdown-mode clojure-mode virtualenvwrapper smex notify browse-kill-ring py-autopep8  helm))
  
 (mapc 'install-if-needed to-install)
    
@@ -30,7 +30,6 @@
 (global-auto-complete-mode t)
 
 (require 'flymake)
-(require 'yasnippet)
 
 (global-set-key [f7] 'find-file-in-repository)
 
