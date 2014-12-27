@@ -126,9 +126,10 @@
 (show-paren-mode t)
 
 ;; show line numbers
-(global-linum-mode 0)
+(global-linum-mode 1)
+(linum-mode 1)
 (setq linum-format "%d ")
-(set-face-attribute 'linum nil :foreground "#BDBCBC" )
+(set-face-attribute 'linum nil :foreground "#3a777e" )
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
