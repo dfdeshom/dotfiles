@@ -45,7 +45,6 @@
 (require 'python-mode)
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (setq py-electric-colon-active t)
-(add-hook 'python-mode-hook 'yas-minor-mode)
 
 ;; Jedi settings
 (require 'jedi)
@@ -126,7 +125,7 @@
 (show-paren-mode t)
 
 ;; show line numbers
-(global-linum-mode 1)
+(global-linum-mode 0)
 (linum-mode 1)
 (setq linum-format "%d ")
 (set-face-attribute 'linum nil :foreground "#3a777e" )
