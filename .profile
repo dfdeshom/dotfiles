@@ -23,7 +23,16 @@ fi
 
 # thinkpad t440p BS 
 # make a real right-click buton
-synclient RightButtonAreaTop=326
+# make a real middle-click button
+synclient RightButtonAreaLeft=5000
+synclient RightButtonAreaRigh=0
+synclient RightButtonAreaTop=63
+synclient RightButtonAreaBott=0
+synclient MiddleButtonAreaLef=3000
+synclient MiddleButtonAreaRig=4063
+synclient MiddleButtonAreaTop=100
+synclient MiddleButtonAreaBot=0
+         
 # disable touchpad almost everywhere 
 synclient AreaBottomEdge=100
 
