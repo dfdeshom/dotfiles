@@ -187,6 +187,11 @@
 ;; return to original line when scrolling
 (setq scroll-preserve-screen-position t)
 
+;; use windowmove to move easily between windows
+;; [shift] + arrow keys
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 ;; helm mode - only useful for certain commands,
 ;; don't completely enable
 (require 'helm-config)
