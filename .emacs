@@ -188,9 +188,10 @@
 (setq scroll-preserve-screen-position t)
 
 ;; use windowmove to move easily between windows
-;; [shift] + arrow keys
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
 
 ;; helm mode - only useful for certain commands,
 ;; don't completely enable
