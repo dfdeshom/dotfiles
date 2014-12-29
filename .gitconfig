@@ -14,7 +14,7 @@ in = !git fetch && git log master..origin/master
 head = "log -n 1 --pretty=fuller"
 
 [core]
-editor = "emacs -nw"
+editor = "emacs"
 
 [color]
 ui = true
