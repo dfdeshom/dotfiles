@@ -1,27 +1,28 @@
-;; Python IDE settings
-
-;; Requisites: Emacs >= 24
+;; install our emacs packages first, if needed
 (require 'package)
-(package-initialize)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+(package-initialize)
  
-;;(package-refresh-contents)
+(unless package-archive-contents
+  (package-refresh-contents))
 
 (defun install-if-needed (package)
   (unless (package-installed-p package)
     (package-install package)))
 
-;; (defun install-if-needed (package)
-;;     (package-install package))
-
 ;; make more packages available with the package installer
-(setq to-install
-      '(python-mode magit  jedi auto-complete  find-file-in-repository pig-mode markdown-mode clojure-mode virtualenvwrapper smex notify browse-kill-ring py-autopep8  helm))
+(defvar to-install
+      '(python-mode magit  jedi auto-complete  find-file-in-repository pig-mode 
+                    markdown-mode clojure-mode virtualenvwrapper smex notify 
+                    browse-kill-ring py-autopep8  helm) "Packages to install")
  
 (mapc 'install-if-needed to-install)
+
+;; Python IDE settings
    
 (require 'magit) 
 (global-set-key "\C-xg" 'magit-status)
@@ -44,7 +45,6 @@
 (require 'python-mode)
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (setq py-electric-colon-active t)
-(add-hook 'python-mode-hook 'yas-minor-mode)
 
 ;; Jedi settings
 (require 'jedi)
@@ -126,8 +126,9 @@
 
 ;; show line numbers
 (global-linum-mode 0)
+(linum-mode 1)
 (setq linum-format "%d ")
-(set-face-attribute 'linum nil :foreground "#BDBCBC" )
+(set-face-attribute 'linum nil :foreground "#3a777e" )
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
