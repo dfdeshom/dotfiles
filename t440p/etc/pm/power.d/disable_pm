@@ -1,0 +1,3 @@
+# disable power management 
+#!/bin/sh 
+/sbin/iwconfig wlan0 power off
