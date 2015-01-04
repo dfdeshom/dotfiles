@@ -10,7 +10,9 @@ dir=$HOME/code/dotfiles
 olddir=$HOME/code/dotfiles_old
 
 # list of files/folders to symlink in homedir
-files=".emacs.d .zshrc .gitconfig .screenrc .tmux.conf .hgrc .bashrc .profile .oh-my-zsh .pip"    
+files=".zshrc .gitconfig .screenrc .tmux.conf .hgrc .bashrc .profile"    
+dirs=".emacs.d .pip .oh-my-zsh"
+
 
 install_dotfiles () {
     # create dotfiles_old in homedir
@@ -25,13 +27,21 @@ install_dotfiles () {
 
     # move any existing dotfiles in homedir to dotfiles_old directory,
     # then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+
     for file in $files; do
-        echo "Moving any existing dotfiles from ~ to $olddir"
+        echo "Moving $file to $olddir"
         mv ~/$file $olddir
-        echo "Copying $file in home directory."
-        #ln -s $dir/$file ~/$file
-        cp -r $dir/$file ~/$file
+        echo "Symlinking $file in home directory."
+        ln -s $dir/$file ~/$file
     done
+
+    for d in $dirs; do
+        echo "Moving any existing dotfiles from ~ to $olddir"
+        mv ~/$d $olddir
+        echo "Copying $dir/$d to ~/"
+        cp -r $dir/$d ~/
+    done
+
 }
 
 install_zsh () {
