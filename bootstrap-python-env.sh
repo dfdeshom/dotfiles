@@ -12,4 +12,4 @@ if [ ! -f ~/.local/bin/pip ]; then
 fi
 
 # install base python packages we need
-pip install --user virtualenvwrapper pylint autopep8 pyflakes ipython
+pip install --user virtualenvwrapper pylint autopep8 pyflakes ipython Fabric
