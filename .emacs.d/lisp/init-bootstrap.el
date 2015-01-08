@@ -13,6 +13,7 @@
     init-magit
     init-markdown
     init-helm
+    init-helm-swoop
     init-pigmode
     init-recentf
     init-smex
