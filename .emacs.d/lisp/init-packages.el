@@ -15,8 +15,8 @@
 
 (defvar to-install
       '(python-mode magit  jedi auto-complete  find-file-in-repository pig-mode 
-                    markdown-mode clojure-mode virtualenvwrapper smex notify 
-                    browse-kill-ring py-autopep8  helm helm-swoop) "Packages to install")
+                    markdown-mode clojure-mode virtualenvwrapper notify 
+                    browse-kill-ring py-autopep8  helm helm-swoop session) "Packages to install")
  
 (mapc 'install-if-needed to-install)
 

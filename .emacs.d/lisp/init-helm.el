@@ -2,6 +2,7 @@
 ;; don't completely enable
 (require 'helm)
 
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-set-key (kbd "C-x b")   #'helm-mini)
 (global-set-key (kbd "C-x C-b") #'helm-buffers-list)

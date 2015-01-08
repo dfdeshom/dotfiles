@@ -16,7 +16,6 @@
     init-helm-swoop
     init-pigmode
     init-recentf
-    init-smex
     init-python
 ))
 
