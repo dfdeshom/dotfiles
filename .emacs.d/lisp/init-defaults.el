@@ -8,6 +8,7 @@
 (linum-mode 1)
 (setq linum-format "%d ")
 (set-face-attribute 'linum nil :foreground "#3a777e" )
+(add-hook 'prog-mode-hook 'linum-mode)
 
 (setq transient-mark-mode t)
 (global-set-key "\M-g" 'goto-line)
