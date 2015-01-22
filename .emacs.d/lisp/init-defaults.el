@@ -35,4 +35,7 @@
 
 (setq-default indent-tabs-mode nil)
 
+;; use nice font
+(set-default-font "Inconsolata-12")
+
 (provide 'init-defaults)
