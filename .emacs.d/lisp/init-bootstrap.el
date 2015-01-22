@@ -11,6 +11,7 @@
     init-autopep8
     init-defaults
     init-magit
+    init-multi-term
     init-markdown
     init-helm
     init-helm-swoop
