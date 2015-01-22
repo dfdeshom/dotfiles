@@ -10,6 +10,7 @@
     init-venv
     init-autopep8
     init-defaults
+    init-session
     init-magit
     init-multi-term
     init-markdown

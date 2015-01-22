@@ -35,7 +35,4 @@
 
 (setq-default indent-tabs-mode nil)
 
-;; save helm M-x command history accross restarts
-(add-hook 'after-init-hook 'session-initialize)
-
 (provide 'init-defaults)
