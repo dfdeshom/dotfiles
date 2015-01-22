@@ -4,6 +4,9 @@
 (setq flymake-run-in-place nil)
 (setq temporary-file-directory "/tmp/")
 
+;; where to find pyflakes
+(setq exec-path (cons "/home/dfdeshom/.local/bin/" exec-path))
+
 (defun flymake-activate ()
   "Activates flymake when real buffer and you have write access"
   (if (and
