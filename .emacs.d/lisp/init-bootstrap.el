@@ -19,6 +19,7 @@
     init-pigmode
     init-recentf
     init-python
+    custom-functions
 ))
 
 (defun load-init-files ()
