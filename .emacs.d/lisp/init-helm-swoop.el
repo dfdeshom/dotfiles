@@ -28,5 +28,9 @@
 ;; Face name is `helm-swoop-line-number-face`
 (setq helm-swoop-use-line-number-face t)
 
+;; disable pre-input 
+(setq helm-swoop-pre-input-function
+      (lambda () ""))
+
 (provide 'init-helm-swoop)
 

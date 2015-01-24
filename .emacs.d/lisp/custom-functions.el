@@ -1,7 +1,7 @@
 (require 'cl)
 
 (defun dfdeshom/terminal-buffers ()
-  "Filter for buffers that are terminals only"
+  "Filter for buffers that are terminalss only"
   (cl-loop for buf in (buffer-list)
                             if (eq 'term-mode (buffer-mode buf))
                             collect (buffer-name buf)) )
