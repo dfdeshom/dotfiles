@@ -11,7 +11,6 @@
     :candidates (lambda () (dfdeshom/terminal-buffers))
     :fuzzy-match helm-buffers-fuzzy-matching
     :keymap helm-buffers-ido-virtual-map
-    :mode-line helm-buffers-ido-virtual-mode-line-string        
     :action (helm-make-actions
             "Switch to terminal buffer"
             (lambda (candidate)
