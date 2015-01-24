@@ -1,10 +1,11 @@
 (require 'cl)
-
+(require 'helm-buffers)
+ 
 (defun dfdeshom/terminal-buffers ()
-  "Filter for buffers that are terminalss only"
+  "Filter for buffers that are terminals only"
   (cl-loop for buf in (buffer-list)
-                            if (eq 'term-mode (buffer-mode buf))
-                            collect (buffer-name buf)) )
+           if (eq 'term-mode (buffer-local-value 'major-mode buf))
+           collect (buffer-name buf)) )
 
 (setq dfdeshom/helm-source-terminals
   (helm-build-sync-source "terminal buffers"
