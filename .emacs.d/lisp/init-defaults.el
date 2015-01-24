@@ -35,6 +35,10 @@
 
 (setq-default indent-tabs-mode nil)
 
+;; Save and restore open buffers, 
+;; point, mark, histories, other variables
+(desktop-save-mode 1)
+
 ;; use nice font
 (set-default-font "Inconsolata-12")
 
