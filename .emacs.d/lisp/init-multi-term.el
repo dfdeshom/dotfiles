@@ -1,6 +1,8 @@
 (require 'multi-term)
 (setq multi-term-program "/bin/zsh")
 
+(setq multi-term-switch-after-close nil)
+
 (add-hook 'term-mode-hook
           (lambda ()
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
