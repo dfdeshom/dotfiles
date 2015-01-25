@@ -2,7 +2,7 @@
 (require 'helm-buffers)
  
 ;; internal functions
-(defun dfdeshom/terminal-buffers2 ()
+(defun dfdeshom/terminal-buffers ()
   "Filter for buffers that are terminals only"
   (cl-loop for buf in (buffer-list)
            if (eq 'term-mode (buffer-local-value 'major-mode buf))
@@ -16,7 +16,7 @@
 ;; sources
 (setq dfdeshom/term-source-terminals
       (helm-build-sync-source "terminal buffers"
-        :candidates (lambda () (dfdeshom/terminal-buffers2))
+        :candidates (lambda () (dfdeshom/terminal-buffers))
         :fuzzy-match helm-buffers-fuzzy-matching
         :keymap helm-buffers-ido-virtual-map
         :action (helm-make-actions
