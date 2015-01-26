@@ -39,6 +39,15 @@
 ;; point, mark, histories, other variables
 (desktop-save-mode 1)
 
+(defun dfdeshom/desktop-save ()
+  "Save desktop periodically when emacs is idle"
+    (interactive)
+    ;; Don't call desktop-save-in-desktop-dir, as it prints a message.
+    (if (eq (desktop-owner) (emacs-pid))
+        (desktop-save desktop-dirname)))
+
+(add-hook 'auto-save-hook 'dfdeshom/desktop-save)
+
 ;; use nice font
 (set-default-font "Inconsolata-12")
 
