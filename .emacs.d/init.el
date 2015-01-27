@@ -15,7 +15,6 @@
  '(current-language-environment "UTF-8")
  '(default-input-method "rfc1345")
  '(global-font-lock-mode t nil (font-lock))
- '(global-hl-line-mode t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(show-paren-mode t nil (paren))
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify))))

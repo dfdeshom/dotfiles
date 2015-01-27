@@ -10,6 +10,9 @@
 (set-face-attribute 'linum nil :foreground "#3a777e" )
 (add-hook 'prog-mode-hook 'linum-mode)
 
+;; highlight current line
+(global-hl-line-mode t)
+
 (setq transient-mark-mode t)
 (global-set-key "\M-g" 'goto-line)
 
