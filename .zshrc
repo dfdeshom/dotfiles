@@ -70,8 +70,11 @@ export WORKON_HOME=$HOME/code/parsely/venvs/
 source ~/.local/bin/virtualenvwrapper.sh
 
 # colors
-export TERM=xterm-256color
- 
+if [[ -n $INSIDE_EMACS  ]] then ;
+    export TERM=xterm-color
+else
+    export TERM=xterm-256color
+fi
 # ssh identities
 eval `ssh-agent -s`
 ssh-add
