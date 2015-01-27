@@ -13,6 +13,21 @@
   (multi-term)
   (rename-buffer name)) 
 
+(defun dfdeshom/delete-marked-terms (_ignore)
+  "Delete marked terminals "
+  (let* ((buffers (helm-marked-candidates :with-wildcard t))
+         (len (length buffers)))
+    (with-helm-display-marked-candidates
+      helm-marked-buffer-name
+      (if (not (y-or-n-p (format "Delete %s Terminal(s)?" len)))
+          (message "(No deletions performed)")
+        (cl-dolist (b buffers)
+          ;; kill the process in the buffer
+          ;; then delete buffer, to avoid confirmation questions
+          (delete-process b)
+          (kill-buffer b))
+        (message "%s Terminals deleted" len)))))
+
 ;; sources
 (setq dfdeshom/term-source-terminals
       (helm-build-sync-source "terminal buffers"
@@ -22,8 +37,10 @@
         :action (helm-make-actions
                  "Switch to terminal buffer"
                  (lambda (candidate)
-                   (helm-switch-to-buffer candidate)))))
-
+                   (helm-switch-to-buffer candidate))
+        
+        "Exit marked terminals"  'dfdeshom/delete-marked-terms)))
+ 
 (setq dfdeshom/term-source-terminal-not-found
   (helm-build-dummy-source
    "Launch new terminal"
