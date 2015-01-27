@@ -11,7 +11,7 @@
 (defun dfdeshom/launch-term (name)
   "Create new terminal in a buffer called NAME"
   (multi-term)
-  (rename-buffer name)) 
+  (rename-buffer (format "*%s*" name))) 
 
 (defun dfdeshom/delete-marked-terms (_ignore)
   "Delete marked terminals "
