@@ -16,7 +16,8 @@
 (defvar to-install
       '(python-mode 
         magit  
-        jedi 
+        jedi
+        flymake
         auto-complete  
         find-file-in-repository 
         pig-mode 
