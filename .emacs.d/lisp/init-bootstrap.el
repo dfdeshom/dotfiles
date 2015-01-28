@@ -16,6 +16,7 @@
     init-markdown
     init-helm
     init-helm-swoop
+    init-projectile
     init-pigmode
     init-recentf
     init-python

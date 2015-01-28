@@ -24,9 +24,11 @@
         clojure-mode 
         virtualenvwrapper 
         notify 
-        py-autopep8  
+        py-autopep8
+        projectile
         helm 
-        helm-swoop 
+        helm-swoop
+        helm-projectile
         session
         multi-term) "Packages to install")
  

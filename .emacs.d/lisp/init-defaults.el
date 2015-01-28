@@ -41,6 +41,9 @@
 ;; Save and restore open buffers, 
 ;; point, mark, histories, other variables
 (desktop-save-mode 1)
+(setq desktop-files-not-to-save   "^$" ;reload tramp paths
+      desktop-buffers-not-to-save "COMMIT_EDITMSG$" ; don't save magit buffers
+      )
 
 (defun dfdeshom/desktop-save ()
   "Save desktop periodically when emacs is idle"
