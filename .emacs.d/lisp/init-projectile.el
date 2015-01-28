@@ -6,8 +6,8 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
-(setq projectile-indexing-method 'native)
-(setq projectile-enable-caching t)
+(setq projectile-indexing-method 'alien)
+(setq projectile-enable-caching nil)
 
 (setq projectile-switch-project-action 'helm-projectile)
 
