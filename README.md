@@ -15,7 +15,7 @@ download the latest version of `pip` and install a few essential packages.
 
 Bootstrapping emacs
 ====================
-On first startup and upon reading `.emacs.d/`, `emacs` will download
+On first startup and upon reading `.emacs.d/`, `emacs` will download,
 install, and configure the different packages in `.emacs.d/lisp/init-packages.el`
 
 Other files
