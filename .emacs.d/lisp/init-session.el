@@ -1,3 +1,4 @@
+(require 'session)
 ;; save helm M-x command history accross restarts
 (add-hook 'after-init-hook 'session-initialize)
 
