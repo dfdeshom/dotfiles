@@ -13,4 +13,6 @@
 
 (add-to-list 'projectile-globally-ignored-directories ".git")
 
+(global-set-key [f7] 'helm-projectile-find-file)
+
 (provide 'init-projectile)

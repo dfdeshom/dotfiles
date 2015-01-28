@@ -31,7 +31,7 @@
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
-(global-set-key [f7] 'find-file-in-repository)
+;(global-set-key [f7] 'find-file-in-repository)
 
 ;; do not make backup files
 (setq make-backup-files nil)
