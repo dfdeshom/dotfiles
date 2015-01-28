@@ -3,6 +3,9 @@
 
 (setq multi-term-switch-after-close nil)
 
+;;set maximum buffer size (scrollback)
+(setq term-buffer-maximum-size 2048)
+
 (add-hook 'term-mode-hook
           (lambda ()
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
