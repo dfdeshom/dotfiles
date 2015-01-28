@@ -43,7 +43,7 @@
 (desktop-save-mode 1)
 (setq desktop-files-not-to-save   "^$" ;reload tramp paths
       desktop-buffers-not-to-save "COMMIT_EDITMSG$" ; don't save magit buffers
-      )
+      desktop-save t)
 
 (defun dfdeshom/desktop-save ()
   "Save desktop periodically when emacs is idle"
