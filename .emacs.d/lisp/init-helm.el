@@ -10,6 +10,11 @@
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-c f") 'helm-recentf)
 
+(defun helm-do-grep-recursively (arg)
+  "Make `helm-do-grep` always grep files recursively"
+  (interactive "P")
+  (let ((current-prefix-arg (not arg)))
+    (helm-do-grep)))
 
 (require 'helm-config)
 (provide 'init-helm)
