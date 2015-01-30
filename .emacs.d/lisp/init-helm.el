@@ -1,6 +1,7 @@
 ;; helm mode - only useful for certain commands,
 ;; don't completely enable
 (require 'helm)
+(require 'helm-config)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
@@ -16,6 +17,9 @@
   (let ((current-prefix-arg (not arg)))
     (helm-do-grep)))
 
-(require 'helm-config)
+;; don't wrap lines in helm buffers, they're wasting space
+;; mimics ibuffer behavior
+(add-hook 'helm-update-hook (lambda () (setq truncate-lines t)))
+
 (provide 'init-helm)
         
