@@ -22,6 +22,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # thinkpad t440p BS 
+# see https://wiki.archlinux.org/index.php/Touchpad_Synaptics
 # make a real right-click buton
 # make a real middle-click button
 synclient RightButtonAreaLeft=5000
