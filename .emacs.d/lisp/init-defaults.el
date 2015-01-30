@@ -41,7 +41,7 @@
 ;; Save and restore open buffers, 
 ;; point, mark, histories, other variables
 (desktop-save-mode 1)
-(setq desktop-files-not-to-save   "^$" ;reload tramp paths
+(setq desktop-files-not-to-save   "^/ssh" ; don't save tramp files
       desktop-buffers-not-to-save "COMMIT_EDITMSG$" ; don't save magit buffers
       desktop-save t)
 
@@ -51,7 +51,7 @@
     ;; Don't call desktop-save-in-desktop-dir, as it prints a message.
     (if (eq (desktop-owner) (emacs-pid))
         (desktop-save desktop-dirname)))
-
+ 
 (add-hook 'auto-save-hook 'dfdeshom/desktop-save)
 
 ;; use nice font
