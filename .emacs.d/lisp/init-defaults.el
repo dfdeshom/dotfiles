@@ -11,7 +11,7 @@
 (add-hook 'prog-mode-hook 'linum-mode)
 
 ;; highlight current line
-(global-hl-line-mode t)
+(global-hl-line-mode -1)
 
 (setq transient-mark-mode t)
 (global-set-key "\M-g" 'goto-line)
@@ -43,7 +43,7 @@
 (desktop-save-mode 1)
 (setq desktop-files-not-to-save   "^/ssh" ; don't save tramp files
       desktop-buffers-not-to-save "COMMIT_EDITMSG$" ; don't save magit buffers
-      desktop-save t)
+       desktop-save 'ask-if-new) 
 
 (defun dfdeshom/desktop-save ()
   "Save desktop periodically when emacs is idle"
