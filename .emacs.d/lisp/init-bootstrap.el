@@ -18,6 +18,7 @@
     init-helm
     init-helm-swoop
     init-projectile
+    init-helm-mt
     init-pigmode
     init-recentf
     init-python

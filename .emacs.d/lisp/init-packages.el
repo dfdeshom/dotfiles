@@ -32,6 +32,7 @@
         helm 
         helm-swoop
         helm-projectile
+        helm-mt
         session
         multi-term) "Packages to install")
  
