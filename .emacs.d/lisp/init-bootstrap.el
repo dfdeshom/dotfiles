@@ -6,6 +6,7 @@
   '(init-packages
     init-jedi
     init-flymake
+    init-flycheck
     init-ac
     init-venv
     init-autopep8

@@ -18,6 +18,8 @@
         magit  
         jedi
         flymake
+        flycheck
+        flycheck-package
         auto-complete  
         find-file-in-repository 
         pig-mode 
