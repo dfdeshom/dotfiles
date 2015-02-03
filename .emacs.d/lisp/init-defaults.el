@@ -13,6 +13,9 @@
 ;; highlight current line
 ;;(global-hl-line-mode t)
 
+;; enable mode for rectangle editing
+(cua-selection-mode t)
+
 (setq transient-mark-mode t)
 (global-set-key "\M-g" 'goto-line)
 
