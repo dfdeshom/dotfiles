@@ -6,6 +6,7 @@
   '(init-packages
     init-jedi
     init-flymake
+    init-flycheck
     init-ac
     init-venv
     init-autopep8
@@ -17,6 +18,7 @@
     init-helm
     init-helm-swoop
     init-projectile
+    init-helm-mt
     init-pigmode
     init-recentf
     init-python

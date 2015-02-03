@@ -18,6 +18,8 @@
         magit  
         jedi
         flymake
+        flycheck
+        flycheck-package
         auto-complete  
         find-file-in-repository 
         pig-mode 
@@ -30,6 +32,7 @@
         helm 
         helm-swoop
         helm-projectile
+        helm-mt
         session
         multi-term) "Packages to install")
  
