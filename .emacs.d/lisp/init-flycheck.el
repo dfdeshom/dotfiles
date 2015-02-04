@@ -9,8 +9,8 @@
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 
 ;; for writing emacs packages code
-(eval-after-load 'flycheck
-      '(flycheck-package-setup))
+;(eval-after-load 'flycheck
+;      '(flycheck-package-setup))
 
 (provide 'init-flycheck)
 
