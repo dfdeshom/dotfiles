@@ -22,6 +22,7 @@
     init-pigmode
     init-recentf
     init-python
+    init-orgmode
     custom-functions
 ))
 

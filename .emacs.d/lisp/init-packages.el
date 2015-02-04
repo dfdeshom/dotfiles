@@ -17,6 +17,7 @@
       '(python-mode 
         magit  
         jedi
+        org
         flymake
         flycheck
         flycheck-package
