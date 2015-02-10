@@ -3,6 +3,8 @@
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (setq py-electric-colon-active t)
 
+(setq py-autopep8-options '("--max-line-length=80 --ignore E301"))
+
 (defun pep8ize ()
   "pep8"
   (add-hook 'before-save-hook 'py-autopep8-before-save nil t)
