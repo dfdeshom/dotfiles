@@ -59,5 +59,9 @@
 
 ;; use nice font
 (set-default-font "Inconsolata-12")
+(require 'rainbow-delimiters)
+(require 'paredit)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'paredit-mode)
 
 (provide 'init-defaults)
