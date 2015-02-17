@@ -4,7 +4,7 @@
 (setq multi-term-switch-after-close nil)
 
 ;;set maximum buffer size (scrollback)
-(setq term-buffer-maximum-size 2048)
+(setq term-buffer-maxihvmum-size 0)
 
 (add-hook 'term-mode-hook
           (lambda ()
