@@ -23,6 +23,8 @@
     init-recentf
     init-python
     init-orgmode
+    init-paredit
+    init-rainbow-delimiters
     custom-functions
 ))
 
