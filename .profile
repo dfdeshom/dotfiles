@@ -26,14 +26,14 @@ fi
 # make a real right-click buton
 # make a real middle-click button
 synclient RightButtonAreaLeft=5000
-synclient RightButtonAreaRigh=0
+synclient RightButtonAreaRight=0
 synclient RightButtonAreaTop=63
-synclient RightButtonAreaBott=0
-synclient MiddleButtonAreaLef=3000
-synclient MiddleButtonAreaRig=4063
+synclient RightButtonAreaBottom=0
+synclient MiddleButtonAreaLeft=3000
+synclient MiddleButtonAreaRight=4063
 synclient MiddleButtonAreaTop=100
-synclient MiddleButtonAreaBot=0
-         
+synclient MiddleButtonAreaBottom=0
+          
 # disable touchpad almost everywhere 
 synclient AreaBottomEdge=100
 
