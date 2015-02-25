@@ -42,6 +42,6 @@
                                                      (dfd/ssh-shell candidate))))))
         :buffer "*ssh to work*"))
 
-(provide 'dfd/ssh-work)
+(provide 'dfd/ssh)
 
-;;; ssh.el ends here
+;;; dfd-ssh.el ends here
