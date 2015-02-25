@@ -2,7 +2,7 @@
 ;; and editing elisp
 
 (require 'flycheck)
-(require 'flycheck-package)
+;(require 'flycheck-package)
 (setq flycheck-emacs-lisp-load-path 'inherit)
 
 (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
