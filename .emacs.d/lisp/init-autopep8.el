@@ -1,3 +1,4 @@
  ;; auto pep8 for nazis
-(setq py-autopep8-options '("--max-line-length=100"))
+(require 'py-autopep8)
+(setq  py-autopep8-options  '("--ignore-error E301" "--max-line-length=100" ))
 (provide 'init-autopep8)
