@@ -1,6 +1,10 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 (require 'init-bootstrap)
 (load-init-files)
+
+(require 'init-custom)
+(load-custom-files)
 
 ;; load custom theme
 (load-theme 'wombat)
