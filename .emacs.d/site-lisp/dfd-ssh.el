@@ -26,11 +26,13 @@
 
 (defun dfd/ssh-shell (host)
   "Launch an SSH shell session to HOST."
-  (let (( buf (format "*ssh-%s*" (car (split-string host  "\\." t))) ) )
+  (let (( bufname (format "*ssh-%s*" (car (split-string host  "\\." t)))))
     (save-window-excursion
-        (async-shell-command (concat "ssh " host) buf )
-        )
-    (switch-to-buffer buf)))
+      ;;;(async-shell-command (concat "ssh " host) buf )
+      (multi-term)
+      (rename-buffer bufname)
+      (send-string (get-buffer bufname) (concat "ssh " host "")))
+    (switch-to-buffer bufname)))
 
 
 (defun dfd/ssh-work ()
