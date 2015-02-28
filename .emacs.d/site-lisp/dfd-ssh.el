@@ -3,6 +3,7 @@
 ;;; easier ssh-ingo into work machines
 
 (require 'helm)
+(require 'multi-term)
 
 ;;; Code:
 (defvar ssh-config-path)
@@ -26,9 +27,11 @@
 
 (defun dfd/ssh-shell (host)
   "Launch an SSH shell session to HOST."
+  (message host)
   (let (( bufname (format "*ssh-%s*" (car (split-string host  "\\." t)))))
     (save-window-excursion
-      ;;;(async-shell-command (concat "ssh " host) buf )
+      
+      ;(async-shell-command (concat "ssh " host) bufname ))
       (multi-term)
       (rename-buffer bufname)
       (send-string (get-buffer bufname) (concat "ssh " host "")))
@@ -38,10 +41,16 @@
 (defun dfd/ssh-work ()
   "Log into to various machines."
   (interactive)
-  (helm :sources   '((name . "SSH to host")
-                     (candidates . (lambda () (get-current-ssh-hosts ssh-config-path)))
-                     (action . (("Log into host" . (lambda (candidate)
-                                                     (dfd/ssh-shell candidate))))))
+  (helm :sources   (list '((name . "SSH to host")
+                           (candidates . (lambda () (get-current-ssh-hosts ssh-config-path)))
+                           (action . (("Log into host" . (lambda (candidate)
+                                                           (dfd/ssh-shell candidate))))))
+
+                         '((name . "SSH to *new* host")
+                           (dummy)
+                           (action . (("Log into *new* host" . (lambda (candidate)
+                                                     (dfd/ssh-shell candidate)))))))
+                         
         :buffer "*ssh to work*"))
 
 (provide 'dfd-ssh)
