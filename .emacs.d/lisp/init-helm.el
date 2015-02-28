@@ -17,6 +17,25 @@
   (let ((current-prefix-arg (not arg)))
     (helm-do-grep)))
 
+(defun dfd/helm-omni (&rest arg) 
+  ;; just in case someone decides to pass an argument, helm-omni won't fail.
+  (interactive)
+  (helm-other-buffer
+    (append '(helm-source-buffers-list ;; list of all open buffers
+               helm-source-recentf)    ;; all recent files
+
+      ;; projectile 
+      (if (projectile-project-p) 
+        '(helm-source-projectile-files-list
+           helm-source-projectile-recentf-list
+           helm-source-projectile-projects)
+        '())
+
+      '(
+         helm-source-buffer-not-found     ;; ask to create a buffer otherwise
+         ))
+    "*helm-omni*"))
+
 ;; don't wrap lines in helm buffers, they're wasting space
 ;; mimics ibuffer behavior
 (add-hook 'helm-update-hook (lambda () (setq truncate-lines t)))
