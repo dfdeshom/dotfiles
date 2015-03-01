@@ -5,7 +5,8 @@
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-set-key (kbd "C-x b")   #'helm-mini)
+;; commented out, see below
+;(global-set-key (kbd "C-x b")   #'helm-mini)
 (global-set-key (kbd "C-x C-b") #'helm-buffers-list)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
@@ -35,6 +36,9 @@
          helm-source-buffer-not-found     ;; ask to create a buffer otherwise
          ))
     "*helm-omni*"))
+
+;; give me more buffer to search through by default
+(global-set-key (kbd "C-x b")   #'dfd/helm-omni)
 
 ;; don't wrap lines in helm buffers, they're wasting space
 ;; mimics ibuffer behavior
