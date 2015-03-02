@@ -21,8 +21,12 @@
 (defun dfd/helm-omni (&rest arg) 
   ;; just in case someone decides to pass an argument, helm-omni won't fail.
   (interactive)
+  ;; populate current buffer list first if not set
+  (unless helm-source-buffers-list
+    (setq helm-source-buffers-list
+          (helm-make-source "Buffers" 'helm-source-buffers)))
   (helm-other-buffer
-    (append '(helm-source-buffers-list ;; list of all open buffers
+    (append '( helm-source-buffers-list ;; current buffers
                helm-source-recentf)    ;; all recent files
 
       ;; projectile 
