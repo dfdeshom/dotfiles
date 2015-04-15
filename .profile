@@ -25,14 +25,14 @@ fi
 # see https://wiki.archlinux.org/index.php/Touchpad_Synaptics
 # make a real right-click buton
 # make a real middle-click button
-synclient RightButtonAreaLeft=5000
-synclient RightButtonAreaRight=0
-synclient RightButtonAreaTop=63
-synclient RightButtonAreaBottom=0
-synclient MiddleButtonAreaLeft=3000
-synclient MiddleButtonAreaRight=4063
-synclient MiddleButtonAreaTop=100
-synclient MiddleButtonAreaBottom=0
+# synclient RightButtonAreaLeft=5000
+# synclient RightButtonAreaRight=0
+# synclient RightButtonAreaTop=63
+# synclient RightButtonAreaBottom=0
+# synclient MiddleButtonAreaLeft=3000
+# synclient MiddleButtonAreaRight=4063
+# synclient MiddleButtonAreaTop=100
+# synclient MiddleButtonAreaBottom=0
           
 # disable touchpad almost everywhere 
 synclient AreaBottomEdge=100
