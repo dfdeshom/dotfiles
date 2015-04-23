@@ -37,9 +37,9 @@
 
       ;; projectile 
       (if (projectile-project-p) 
-        '(helm-source-projectile-files-list
-           helm-source-projectile-recentf-list
-           helm-source-projectile-projects)
+          '(helm-source-projectile-files-list
+            helm-source-projectile-projects
+            helm-source-projectile-recentf-list)
         '())
 
       ;; ask to create a buffer otherwise
