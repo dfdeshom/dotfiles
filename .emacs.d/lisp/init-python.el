@@ -5,7 +5,7 @@
 
 (defun pep8ize ()
   "pep8"
-  (add-hook 'before-save-hook 'py-autopep8-before-save nil t)
+  (add-hook 'before-save-hook 'py-autopep8-buffer nil t)
 )
 
 (add-hook 'python-mode-hook
