@@ -19,7 +19,8 @@
   (let ((current-prefix-arg (not arg)))
     (helm-do-grep)))
 
-(defun dfd/helm-omni (&rest arg) 
+(defun dfd/helm-omni (&rest arg)
+  "Define my own custom source list and ordering when changing/listing buffers"
   ;; just in case someone decides to pass an argument, helm-omni won't fail.
   (interactive)
   ;; show full path in recentf buffer     
@@ -52,6 +53,10 @@
 ;; don't wrap lines in helm buffers, they're wasting space
 ;; mimics ibuffer behavior
 (add-hook 'helm-update-hook (lambda () (setq truncate-lines t)))
+
+;; always show helm window to the right, never under current window 
+(setq helm-split-window-default-side 'right)
+(setq helm-always-two-windows t)
 
 (provide 'init-helm)
         
