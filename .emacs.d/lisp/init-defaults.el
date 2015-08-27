@@ -1,5 +1,4 @@
 (ido-mode t)
-(iswitchb-mode 0)
 
 (show-paren-mode t)
 
@@ -14,7 +13,7 @@
 ;;(global-hl-line-mode t)
 
 ;; enable mode for rectangle editing
-(cua-selection-mode t)
+;(cua-selection-mode t)
 
 (setq transient-mark-mode t)
 (global-set-key "\M-g" 'goto-line)
