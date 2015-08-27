@@ -34,6 +34,7 @@
         helm-swoop
         helm-projectile
         helm-mt
+        helm-open-github
         session
         paredit
         rainbow-delimiters 
