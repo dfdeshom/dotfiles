@@ -58,5 +58,10 @@
 (setq helm-split-window-default-side 'right)
 (setq helm-always-two-windows t)
 
+;; when navigating the mark ring, follow the highlited selection
+;; automatically
+(add-hook 'helm-before-initialize-hook
+          #'(lambda () (helm-attrset 'follow 1 helm-source-mark-ring)))
+
 (provide 'init-helm)
         
