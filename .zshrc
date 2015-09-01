@@ -62,6 +62,9 @@ export PATH=$PATH:/home/dfdeshom/code/apache-ant-1.8.4/bin
 export PATH=$PATH:/home/dfdeshom/opt/spark-1.1.0-bin-hadoop1/bin
 alias ipyspark='IPYTHON=1 pyspark'
 
+# ptrack storm stuff
+export PATH=$PATH:/home/dfdeshom/code/storm-0.8.2/bin
+export PATH=$PATH:/home/dfdeshom/code/thrift-0.9.2/compiler/cpp
 
 alias cls='clear'
 
