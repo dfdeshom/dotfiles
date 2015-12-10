@@ -62,6 +62,9 @@ export PATH=$PATH:/home/dfdeshom/code/apache-ant-1.8.4/bin
 export PATH=$PATH:/home/dfdeshom/opt/spark-1.1.0-bin-hadoop1/bin
 alias ipyspark='IPYTHON=1 pyspark'
 
+export PATH=$PATH:/home/dfdeshom/code/nim-0.12.0/bin
+export PATH=$PATH:/home/dfdeshom/code/nimble
+export PATH=$PATH:/home/dfdeshom/.nimble/bin/
 
 alias cls='clear'
 
