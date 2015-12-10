@@ -66,6 +66,10 @@ export PATH=$PATH:/home/dfdeshom/code/nim-0.12.0/bin
 export PATH=$PATH:/home/dfdeshom/code/nimble
 export PATH=$PATH:/home/dfdeshom/.nimble/bin/
 
+# ptrack storm stuff
+export PATH=$PATH:/home/dfdeshom/code/storm-0.8.2/bin
+export PATH=$PATH:/home/dfdeshom/code/thrift-0.9.2/compiler/cpp
+
 alias cls='clear'
 
 #v-env wrapper

@@ -43,8 +43,13 @@
             helm-source-projectile-recentf-list)
         '())
 
+      ;; files in the current directory
+      '(helm-source-files-in-current-dir)
+      
       ;; ask to create a buffer otherwise
-      '(helm-source-buffer-not-found))
+      '(helm-source-buffer-not-found)
+      
+      )
     "*helm-omni*")))
 
 ;; give me more buffer to search through by default
