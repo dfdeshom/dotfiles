@@ -1,3 +1,6 @@
+;; give 100 MB to garbae collector
+(setq gc-cons-threshold 100000000)
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 (require 'init-bootstrap)
