@@ -68,7 +68,11 @@ export PATH=$PATH:/home/dfdeshom/.nimble/bin/
 
 # ptrack storm stuff
 export PATH=$PATH:/home/dfdeshom/code/storm-0.8.2/bin
-export PATH=$PATH:/home/dfdeshom/code/thrift-0.9.2/compiler/cpp
+export PATH=$PATH:/home/dfdeshom/code/thrift-0.8.0/compiler/cpp
+
+export PATH=$PATH:/home/dfdeshom/code/Nim/bin
+export PATH=$PATH:/home/dfdeshom/.nimble/bin
+
 
 alias cls='clear'
 
@@ -91,5 +95,5 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 20
 
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-export JRE_HOME=/usr/lib/jvm/java-7-oracle/jre/
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre/
