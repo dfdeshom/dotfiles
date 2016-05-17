@@ -5,7 +5,6 @@
 (defvar init-files
   '(init-packages
     init-jedi
-    init-flymake
     init-flycheck
     init-ac
     init-venv
