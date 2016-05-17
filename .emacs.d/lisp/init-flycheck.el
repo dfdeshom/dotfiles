@@ -2,7 +2,9 @@
 ;; and editing elisp
 
 (require 'flycheck)
-;(require 'flycheck-package)
+(setq flycheck-python-flake8-executable "junk")
+(setq flycheck-python-pylint-executable "/home/dfdeshom/.local/bin/pylint")
+
 (setq flycheck-emacs-lisp-load-path 'inherit)
 
 (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
