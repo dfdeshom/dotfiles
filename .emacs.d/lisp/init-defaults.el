@@ -56,6 +56,13 @@
  
 (add-hook 'auto-save-hook 'dfdeshom/desktop-save)
 
+;; pase from clipboard
+(global-set-key (kbd "<mouse-2>") 'x-clipboard-yank)
+
+;; prevent a bug where emacs hangs when pasting from
+;; a browser
+(setq x-selection-timeout 300)
+
 ;; use nice font
 (set-default-font "Inconsolata-12")
 
