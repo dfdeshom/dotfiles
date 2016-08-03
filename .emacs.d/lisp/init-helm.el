@@ -57,7 +57,7 @@
 
 ;; don't wrap lines in helm buffers, they're wasting space
 ;; mimics ibuffer behavior
-(add-hook 'helm-update-hook (lambda () (setq truncate-lines t)))
+;; (add-hook 'helm-update-hook (lambda () (setq truncate-lines t)))
 
 ;; always show helm window to the right, never under current window 
 (setq helm-split-window-default-side 'right)
