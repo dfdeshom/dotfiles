@@ -73,6 +73,8 @@ export PATH=$PATH:/home/dfdeshom/code/thrift-0.8.0/compiler/cpp
 export PATH=$PATH:/home/dfdeshom/code/Nim/bin
 export PATH=$PATH:/home/dfdeshom/.nimble/bin
 
+# eclipse
+export SWT_GTK3=0
 
 alias cls='clear'
 
