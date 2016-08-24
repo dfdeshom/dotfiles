@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/dfdeshom/.local/bin:/opt/vagrant/bin"
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/dfdeshom/.local/bin:/opt/vagrant/bin
 # storm, maven
 export PATH=$PATH:/home/dfdeshom/code/storm-0.8.1/bin:/home/dfdeshom/code/apache-maven-3.2.3/bin
 
@@ -59,8 +59,8 @@ export PATH=$PATH:/home/dfdeshom/code/storm-0.8.1/bin:/home/dfdeshom/code/apache
 export PATH=$PATH:/home/dfdeshom/code/apache-ant-1.8.4/bin
 
 # spark
-export PATH=$PATH:/home/dfdeshom/opt/spark-1.1.0-bin-hadoop1/bin
-alias ipyspark='IPYTHON=1 pyspark'
+export PATH=$PATH:/home/dfdeshom/code/spark-2.0.0-bin-hadoop2.7/bin
+alias ipyspark='PYSPARK_DRIVER_PYTHON=ipython pyspark'
 
 export PATH=$PATH:/home/dfdeshom/code/nim-0.12.0/bin
 export PATH=$PATH:/home/dfdeshom/code/nimble
@@ -90,7 +90,8 @@ else
 fi
 # ssh identities
 eval `ssh-agent -s`
-ssh-add
+ssh-add   
+ssh-add ~/.ssh/id_rsa_shareaholic
 
 # recent dirs using cdr
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook

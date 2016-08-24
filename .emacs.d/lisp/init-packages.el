@@ -40,7 +40,8 @@
         helm-open-github
         session
         paredit
-        rainbow-delimiters 
+        rainbow-delimiters
+        exec-path-from-shell
         multi-term) "Packages to install")
  
 (mapc 'install-if-needed to-install)
