@@ -79,7 +79,7 @@ export SWT_GTK3=0
 alias cls='clear'
 
 #v-env wrapper
-export WORKON_HOME=$HOME/code/parsely/venvs/
+export WORKON_HOME=$HOME/code/venvs/
 source ~/.local/bin/virtualenvwrapper.sh
 
 # colors
