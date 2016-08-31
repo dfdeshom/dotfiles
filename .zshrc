@@ -100,3 +100,9 @@ zstyle ':chpwd:*' recent-dirs-max 20
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre/
+
+# pyspark
+export SPARK_HOME=$HOME/code//spark-2.0.0-bin-hadoop2.7
+export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.1-src.zip:$PYTHONPATH
+
