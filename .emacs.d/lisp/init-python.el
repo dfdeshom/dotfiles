@@ -21,5 +21,8 @@
 (add-hook 'python-mode-hook 'auto-complete-mode)
 
 ;; ugh, see https://github.com/paetzke/py-autopep8.el/issues/19
+(defun my-save-kill-ring (fun &rest _args)
+  (let ((kill-ring nil))
+    (funcall fun)))
 (advice-add 'py-autopep8-buffer :around 'my-save-kill-ring)
 (provide 'init-python)
