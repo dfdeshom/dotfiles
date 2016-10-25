@@ -13,12 +13,6 @@
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-c f") 'helm-recentf)
 
-(defun dfd/helm-do-grep-recursively (arg)
-  "Make `helm-do-grep` always grep files recursively"
-  (interactive "P")
-  (let ((current-prefix-arg (not arg)))
-    (helm-do-grep)))
-
 (defun dfd/helm-omni (&rest arg)
   "Define my own custom source list and ordering when changing/listing buffers"
   ;; just in case someone decides to pass an argument, helm-omni won't fail.
