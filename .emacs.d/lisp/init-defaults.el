@@ -24,6 +24,9 @@
 ;; yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; just kill this buffer
+(global-set-key (kbd "C-x k")  'kill-this-buffer)
+
 ;; return to original line when scrolling
 (setq scroll-preserve-screen-position t)
 
