@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/dfdeshom/.local/bin:/opt/vagrant/bin
 # storm, maven
-export PATH=$PATH:/home/dfdeshom/code/storm-0.8.1/bin:/home/dfdeshom/code/apache-maven-3.2.3/bin
+export PATH=$PATH:/home/dfdeshom/code/apache-maven-3.2.3/bin
 
 # ant
 export PATH=$PATH:/home/dfdeshom/code/apache-ant-1.8.4/bin
@@ -65,10 +65,6 @@ alias ipyspark='PYSPARK_DRIVER_PYTHON=ipython pyspark'
 export PATH=$PATH:/home/dfdeshom/code/nim-0.12.0/bin
 export PATH=$PATH:/home/dfdeshom/code/nimble
 export PATH=$PATH:/home/dfdeshom/.nimble/bin/
-
-# ptrack storm stuff
-export PATH=$PATH:/home/dfdeshom/code/storm-0.8.2/bin
-export PATH=$PATH:/home/dfdeshom/code/thrift-0.8.0/compiler/cpp
 
 export PATH=$PATH:/home/dfdeshom/code/Nim/bin
 export PATH=$PATH:/home/dfdeshom/.nimble/bin
@@ -91,7 +87,6 @@ fi
 # ssh identities
 eval `ssh-agent -s`
 ssh-add   
-ssh-add ~/.ssh/id_rsa_shareaholic
 
 # recent dirs using cdr
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -102,7 +97,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre/
 
 # pyspark
-export SPARK_HOME=$HOME/code//spark-2.0.1-bin-hadoop2.7
+export SPARK_HOME=$HOME/code/spark-2.0.1-bin-hadoop2.7
 export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
-export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.1-src.zip:$PYTHONPATH
+export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 
+export EDITOR="emacs"

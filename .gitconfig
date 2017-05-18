@@ -40,3 +40,5 @@ autosetuprebase = always
 
 [push]
 default = current
+[github]
+user = dfdeshom
