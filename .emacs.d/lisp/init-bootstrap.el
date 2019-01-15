@@ -24,6 +24,7 @@
     init-orgmode
     init-paredit
     init-rainbow-delimiters
+    init-blacken
     custom-functions
 ))
 

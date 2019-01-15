@@ -67,6 +67,6 @@
 (setq x-selection-timeout 300)
 
 ;; use nice font
-(set-default-font "Inconsolata-12")
-
+(set-frame-font "Monospace-12")
+ 
 (provide 'init-defaults)

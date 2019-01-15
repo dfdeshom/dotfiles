@@ -18,7 +18,8 @@
 
 (defvar to-install
       '(python-mode 
-        magit  
+        magit
+        blacken
         jedi
         org
         flymake
@@ -31,7 +32,6 @@
         clojure-mode 
         virtualenvwrapper 
         notify 
-        py-autopep8
         projectile
         helm 
         helm-swoop
