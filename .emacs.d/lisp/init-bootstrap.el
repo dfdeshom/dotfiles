@@ -25,6 +25,7 @@
     init-paredit
     init-rainbow-delimiters
     init-blacken
+    mygo-mode
     custom-functions
 ))
 

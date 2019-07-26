@@ -17,7 +17,7 @@
     (package-install package)))
 
 (defvar to-install
-      '(python-mode 
+      '(python-mode
         magit
         blacken
         jedi
@@ -25,15 +25,15 @@
         flymake
         flycheck
         flycheck-package
-        auto-complete  
-        find-file-in-repository 
-        pig-mode 
-        markdown-mode 
-        clojure-mode 
-        virtualenvwrapper 
-        notify 
+        auto-complete
+        find-file-in-repository
+        pig-mode
+        markdown-mode
+        clojure-mode
+        virtualenvwrapper
+        notify
         projectile
-        helm 
+        helm
         helm-swoop
         helm-projectile
         helm-mt
@@ -42,7 +42,13 @@
         paredit
         rainbow-delimiters
         exec-path-from-shell
-        multi-term) "Packages to install")
+        flymake-go
+        company
+        company-go
+        golint
+        go-mode
+        go-eldoc
+        multi-term) "Packages to install.")
  
 (mapc 'install-if-needed to-install)
 

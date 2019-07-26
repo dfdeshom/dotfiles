@@ -3,6 +3,7 @@
 (require 'helm)
 (require 'helm-config)
 (require 'helm-projectile)
+(require 'helm-for-files)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
