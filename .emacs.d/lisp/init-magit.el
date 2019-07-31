@@ -13,10 +13,6 @@
 ;; that were ran, AND the output is of the form
 ;; `path/to/file.go:21:20:`
 ;; we can go to the exact file at the exact line number
-(add-hook 'magit-mode-hook (lambda ()
-                             (when (eq major-mode 'magit-process-mode)
-                               (compilation-minor-mode)
-                               )
-                             ))
+(add-hook 'magit-process-mode-hook 'compilation-minor-mode)
 
 (provide 'init-magit)
