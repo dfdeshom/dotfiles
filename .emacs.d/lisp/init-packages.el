@@ -48,6 +48,7 @@
         golint
         go-mode
         go-eldoc
+        yaml-mode
         multi-term) "Packages to install.")
  
 (mapc 'install-if-needed to-install)
