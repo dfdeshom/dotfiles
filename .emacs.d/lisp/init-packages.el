@@ -49,6 +49,7 @@
         go-mode
         go-eldoc
         yaml-mode
+        sqlformat
         multi-term) "Packages to install.")
  
 (mapc 'install-if-needed to-install)

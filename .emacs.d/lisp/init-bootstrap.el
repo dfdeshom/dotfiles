@@ -26,6 +26,7 @@
     init-rainbow-delimiters
     init-blacken
     mygo-mode
+    init-sqlformat
     custom-functions
 ))
 
