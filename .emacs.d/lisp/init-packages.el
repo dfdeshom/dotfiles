@@ -50,6 +50,7 @@
         go-eldoc
         yaml-mode
         sqlformat
+        dockerfile-mode
         multi-term) "Packages to install.")
  
 (mapc 'install-if-needed to-install)
