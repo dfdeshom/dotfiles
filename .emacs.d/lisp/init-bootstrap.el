@@ -27,6 +27,7 @@
     init-blacken
     mygo-mode
     init-sqlformat
+    init-sqli
     custom-functions
 ))
 

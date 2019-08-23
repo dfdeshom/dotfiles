@@ -69,15 +69,4 @@
 ;; use nice font
 (set-frame-font "Monospace-12")
 
-;; SQLi config
-(add-hook 'sql-interactive-mode-hook
-          (lambda ()
-            (toggle-truncate-lines t)))
-
-(setq sql-postgres-login-params
-      '((user :default "postgres")
-        (database :default "app")
-        (server :default "localhost")
-        (port :default 5435)))
-
 (provide 'init-defaults)
