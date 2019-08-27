@@ -1,5 +1,5 @@
 ;; SQLi config
-(setq sql-set-product 'postgres)
+(setq sql-product 'postgres)
 
 (setq sql-postgres-login-params
       '((user :default "postgres")
