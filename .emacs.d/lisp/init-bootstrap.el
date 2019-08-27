@@ -4,6 +4,7 @@
 
 (defvar init-files
   '(init-packages
+    init-company
     init-jedi
     init-flycheck
     init-ac
