@@ -1,6 +1,6 @@
 ;; Python mode settings
 (require 'python-mode)
-(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+;; (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (setq py-electric-colon-active t)
 
 

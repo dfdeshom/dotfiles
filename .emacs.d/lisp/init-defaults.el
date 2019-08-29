@@ -9,6 +9,9 @@
 (set-face-attribute 'linum nil :foreground "#3a777e" )
 (add-hook 'prog-mode-hook 'linum-mode)
 
+;; disable eldoc, it interferes with python-mode
+(global-eldoc-mode -1)
+
 ;; highlight current line
 ;;(global-hl-line-mode t)
 
