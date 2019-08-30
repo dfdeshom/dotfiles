@@ -7,13 +7,6 @@
         (server :default "localhost")
         (port :default 5435)))
 
-;; make SQLi use and remember command history
-(defun turn-on-comint-history (history-file)
-          (setq comint-input-ring-file-name history-file)
-          (comint-read-input-ring 'silent))
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Provide completions to SQli[postgres]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -211,15 +204,27 @@ should respond to, ARG and IGNORED are not used."
 (add-to-list 'company-backends 'dfd/company-postgres-backend)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; hooks
+;; make SQLi use and remember command history
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun turn-on-comint-history (history-file)
+          (setq comint-input-ring-file-name history-file)
+          (comint-read-input-ring 'silent))
+
 (add-hook 'kill-buffer-hook #'comint-write-input-ring)
 
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
             (toggle-truncate-lines t)
             (company-mode)
-            (turn-on-comint-history "/home/dfdeshom/.psql_history")
-            ))
+            ;; save history for postgres
+            (if  (eq sql-product 'postgres)
+                (turn-on-comint-history "/home/dfdeshom/.psql_history"))
+            ;; save history for custom tsql
+            (if  (eq sql-product 'ms-tsql)
+                (turn-on-comint-history "/home/dfdeshom/.tsql_history"))
+            
+            )
+            )
 
 (provide 'init-sqli)
