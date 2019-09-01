@@ -72,4 +72,13 @@
 ;; use nice font
 (set-frame-font "Monospace-12")
 
+;;use convenient keys for i-search
+;; i-search history. Return to exit
+(define-key isearch-mode-map (kbd "<up>") 'isearch-ring-retreat )
+(define-key isearch-mode-map (kbd "<down>") 'isearch-ring-advance )
+
+;;i-search matches. Return to exit
+(define-key isearch-mode-map (kbd "<left>") 'isearch-repeat-backward)
+(define-key isearch-mode-map (kbd "<right>") 'isearch-repeat-forward)
+
 (provide 'init-defaults)
