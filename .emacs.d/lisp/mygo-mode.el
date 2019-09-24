@@ -5,6 +5,7 @@
 (add-hook 'go-mode-hook (lambda ()
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode)
+                          (auto-complete-mode -1)
                           (local-set-key (kbd "M-.") 'godef-jump)
                           (go-eldoc-setup)
                           
