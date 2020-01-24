@@ -19,6 +19,7 @@ head = "log -n 1 --pretty=fuller"
 [core]
 editor = "emacs"
 
+
 [color]
 ui = true
 

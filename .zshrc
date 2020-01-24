@@ -59,7 +59,7 @@ export PATH=$PATH:/home/dfdeshom/code/apache-maven-3.2.3/bin
 export PATH=$PATH:/home/dfdeshom/code/apache-ant-1.8.4/bin
 
 # spark
-export PATH=$PATH:/home/dfdeshom/code/spark-2.0.1-bin-hadoop2.7/bin
+export PATH=$PATH:/home/dfdeshom/code/spark-2.1.1-bin-hadoop2.7/bin
 alias ipyspark='PYSPARK_DRIVER_PYTHON=ipython pyspark'
 
 export PATH=$PATH:/home/dfdeshom/code/nim-0.12.0/bin
@@ -69,12 +69,17 @@ export PATH=$PATH:/home/dfdeshom/.nimble/bin/
 export PATH=$PATH:/home/dfdeshom/code/Nim/bin
 export PATH=$PATH:/home/dfdeshom/.nimble/bin
 
+# go
+export GOPATH=$HOME/code/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
 # eclipse
 export SWT_GTK3=0
 
 alias cls='clear'
 
 #v-env wrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/code/venvs/
 source ~/.local/bin/virtualenvwrapper.sh
 
@@ -97,8 +102,11 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre/
 
 # pyspark
-export SPARK_HOME=$HOME/code/spark-2.0.1-bin-hadoop2.7
+export SPARK_HOME=$HOME/code/spark-2.1.1-bin-hadoop2.7
 export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 
-export EDITOR="emacs"
+export EDITOR="emacs -Q"
+export LD_LIBRARY_PATH=/usr/local/lib
+
+alias kindle='WINEPREFIX=~/prefix32 wine ~/KindleForPC-installer-1.17.44170.exe'

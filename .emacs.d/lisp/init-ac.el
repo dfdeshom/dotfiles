@@ -1,5 +1,6 @@
-(require 'auto-complete)
+;;(require 'auto-complete)
 ;; (global-auto-complete-mode t)
+(global-auto-complete-mode -1)
 
 ;; ; auto-complete mode extra settings
 ;; (setq
