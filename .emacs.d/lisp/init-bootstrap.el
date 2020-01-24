@@ -9,7 +9,7 @@
     init-flycheck
     init-ac
     init-venv
-    init-autopep8
+    ;init-autopep8
     init-defaults
     init-session
     init-magit
@@ -26,7 +26,7 @@
     init-paredit
     init-rainbow-delimiters
     init-blacken
-    mygo-mode
+    ;; mygo-mode
     init-sqlformat
     ;init-tsql
     init-sqli
