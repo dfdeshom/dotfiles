@@ -18,6 +18,6 @@
 (add-hook 'python-mode-hook 'semantic-mode)
 (add-hook 'python-mode-hook 'electric-indent-mode)
 (add-hook 'python-mode-hook 'auto-complete-mode)
-(add-hook 'python-mode-hook 'blacken-mode)
+;(add-hook 'python-mode-hook 'blacken-mode)
  
 (provide 'init-python)

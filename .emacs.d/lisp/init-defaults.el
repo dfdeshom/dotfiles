@@ -21,7 +21,7 @@
 (setq transient-mark-mode t)
 (global-set-key "\M-g" 'goto-line)
 
-;; get rid of icons in graphical mode
+`;; get rid of icons in graphical mode
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
 ;; yes or no
@@ -62,15 +62,22 @@
  
 (add-hook 'auto-save-hook 'dfdeshom/desktop-save)
 
-;; pase from clipboard
+;; paste from clipboard
 (global-set-key (kbd "<mouse-2>") 'x-clipboard-yank)
+
+;; paste with middle click
+(setq x-select-enable-primary t)
 
 ;; prevent a bug where emacs hangs when pasting from
 ;; a browser
 (setq x-selection-timeout 300)
 
 ;; use nice font
-(set-frame-font "Monospace-12")
+(set-frame-font "Monospace-15")
+;(set-frame-font "Bitstream Vera Sans Mono-15")
+;(set-frame-font "Fantasque Sans Mono-17")
+
+;(set-frame-font "Ubuntu Mono-17")
 
 ;;use convenient keys for i-search
 ;; i-search history. Return to exit

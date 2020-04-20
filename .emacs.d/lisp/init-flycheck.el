@@ -2,8 +2,10 @@
 ;; and editing elisp
 
 (require 'flycheck)
-(setq flycheck-python-flake8-executable "junk")
+(require 'elpy)
+
 (setq flycheck-python-pylint-executable "/home/dfdeshom/.local/bin/pylint")
+(setq flycheck-python-flake8-executable "/home/dfdeshom/.local/bin/flake8")
 
 (setq flycheck-emacs-lisp-load-path 'inherit)
 
@@ -13,6 +15,10 @@
 ;; for writing emacs packages code
 ;(eval-after-load 'flycheck
 ;      '(flycheck-package-setup))
+
+;; (when (require 'flycheck nil t)
+;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (provide 'init-flycheck)
 

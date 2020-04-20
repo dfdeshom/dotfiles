@@ -22,15 +22,12 @@
         blacken
         jedi
         org
-        flymake
         flycheck
         flycheck-package
         auto-complete
         find-file-in-repository
         pig-mode
         markdown-mode
-        clojure-mode
-        virtualenvwrapper
         notify
         projectile
         helm
@@ -42,15 +39,10 @@
         paredit
         rainbow-delimiters
         exec-path-from-shell
-        flymake-go
-        company
-        company-go
-        golint
-        go-mode
-        go-eldoc
         yaml-mode
         sqlformat
         dockerfile-mode
+	elpy
         multi-term) "Packages to install.")
  
 (mapc 'install-if-needed to-install)

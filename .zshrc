@@ -59,8 +59,13 @@ export PATH=$PATH:/home/dfdeshom/code/apache-maven-3.2.3/bin
 export PATH=$PATH:/home/dfdeshom/code/apache-ant-1.8.4/bin
 
 # spark
-export PATH=$PATH:/home/dfdeshom/code/spark-2.1.1-bin-hadoop2.7/bin
-alias ipyspark='PYSPARK_DRIVER_PYTHON=ipython pyspark'
+export PATH=$PATH:/home/dfdeshom/code/spark-2.4.4-bin-hadoop2.7/bin
+# pyspark
+export SPARK_HOME=$HOME/code/spark-2.4.4-bin-hadoop2.7
+export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+#export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
+
+alias ipyspark='PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS=notebook pyspark'
 
 export PATH=$PATH:/home/dfdeshom/code/nim-0.12.0/bin
 export PATH=$PATH:/home/dfdeshom/code/nimble
@@ -98,13 +103,9 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 20
 
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre/
+#export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+#export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre/
 
-# pyspark
-export SPARK_HOME=$HOME/code/spark-2.1.1-bin-hadoop2.7
-export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
-export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 
 export EDITOR="emacs -Q"
 export LD_LIBRARY_PATH=/usr/local/lib
