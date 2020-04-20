@@ -1,22 +1,22 @@
 ;; add flycheck-mode, but only for writing
 ;; and editing elisp
 
-(require 'flycheck)
-(require 'elpy)
+;; (require 'flycheck)
+;; (require 'elpy)
 
-(setq flycheck-python-pylint-executable "/home/dfdeshom/.local/bin/pylint")
-(setq flycheck-python-flake8-executable "/home/dfdeshom/.local/bin/flake8")
+;; (setq flycheck-python-pylint-executable "/home/dfdeshom/.local/bin/pylint")
+;; ;;(setq flycheck-python-flake8-executable "/home/dfdeshom/.local/bin/flake8")
 
-(setq flycheck-emacs-lisp-load-path 'inherit)
+;; (setq flycheck-emacs-lisp-load-path 'inherit)
 
-(add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
-(add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
+;; (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
+;; (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 
-;; for writing emacs packages code
-;(eval-after-load 'flycheck
-;      '(flycheck-package-setup))
+;; ;; for writing emacs packages code
+;; ;(eval-after-load 'flycheck
+;; ;      '(flycheck-package-setup))
 
-;; (when (require 'flycheck nil t)
+;; (when (load "flycheck" t t)
 ;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
 ;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
 

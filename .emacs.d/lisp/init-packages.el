@@ -20,13 +20,11 @@
       '(python-mode
         magit
         blacken
-        jedi
         org
         flycheck
         flycheck-package
         auto-complete
         find-file-in-repository
-        pig-mode
         markdown-mode
         notify
         projectile

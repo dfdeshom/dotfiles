@@ -4,13 +4,9 @@
 
 (defvar init-files
   '(init-packages
-    init-company
     init-flycheck
     init-ac
-    init-venv
-    init-elpy
     init-exec-path-from-shell
-    init-defaults
     init-session
     init-magit
     init-multi-term
@@ -20,14 +16,16 @@
     init-projectile
     init-helm-mt
     init-recentf
-    init-python
+    ;init-python
     init-orgmode
     init-paredit
     init-rainbow-delimiters
     init-blacken
     init-sqlformat
-    init-sqli
-    custom-functions
+    ;init-sqli
+    init-elpy
+    init-defaults
+    ;; custom-functions
 ))
 
 (defun load-init-files ()
