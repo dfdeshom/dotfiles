@@ -5,11 +5,11 @@
 (defvar init-files
   '(init-packages
     init-company
-    init-jedi
     init-flycheck
     init-ac
     init-venv
-    ;init-autopep8
+    init-elpy
+    init-exec-path-from-shell
     init-defaults
     init-session
     init-magit
@@ -19,16 +19,13 @@
     init-helm-swoop
     init-projectile
     init-helm-mt
-    init-pigmode
     init-recentf
     init-python
     init-orgmode
     init-paredit
     init-rainbow-delimiters
     init-blacken
-    ;; mygo-mode
     init-sqlformat
-    ;init-tsql
     init-sqli
     custom-functions
 ))

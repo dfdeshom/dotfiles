@@ -6,11 +6,6 @@
 (require 'init-bootstrap)
 (load-init-files)
 
-;; inherit PATH variables when started in GUI mode
-;; but not from a shell
-(when (memq window-system '(x))
-  (exec-path-from-shell-initialize))
-
 (require 'init-custom)
 (load-custom-files)
 
