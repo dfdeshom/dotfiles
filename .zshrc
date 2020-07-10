@@ -85,8 +85,8 @@ alias cls='clear'
 
 #v-env wrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/code/venvs/
-source ~/.local/bin/virtualenvwrapper.sh
+export WORKON_HOME=~/.pyenv/versions/
+#source ~/.local/bin/virtualenvwrapper.sh
 
 # colors
 if [[ -n $INSIDE_EMACS  ]] then ;
