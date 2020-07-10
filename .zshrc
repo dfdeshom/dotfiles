@@ -111,3 +111,7 @@ export EDITOR="emacs -Q"
 export LD_LIBRARY_PATH=/usr/local/lib
 
 alias kindle='WINEPREFIX=~/prefix32 wine ~/KindleForPC-installer-1.17.44170.exe'
+
+export PATH="/home/dfdeshom/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
