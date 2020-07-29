@@ -45,7 +45,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(virtualenv )
+plugins=(virtualenv zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,3 +115,6 @@ alias kindle='WINEPREFIX=~/prefix32 wine ~/KindleForPC-installer-1.17.44170.exe'
 export PATH="/home/dfdeshom/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
