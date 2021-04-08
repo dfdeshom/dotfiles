@@ -118,3 +118,27 @@ eval "$(pyenv virtualenv-init -)"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# k aliases
+alias k="kubectl"
+alias kns="kubectl config set-context $(kubectl config current-context) --namespace"
+alias kdesc="kubectl describe"
+alias kget="kubectl get -o wide"
+alias kedit="kubectl edit"
+alias klogs="kubectl logs"
+alias ktail="stern"
+alias ksc="kubectl config use-context"
+
+function kbash {
+    # bash into a pod
+    kubectl exec -ti $1 bash
+}
+
+kctx () {
+    if [[ $# -eq 0 ]]
+    then
+        kubectl config get-contexts
+    else
+        kubectl config use-context $@
+    fi
+}

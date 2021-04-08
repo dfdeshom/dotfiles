@@ -33,6 +33,7 @@
         helm-projectile
         helm-mt
         helm-open-github
+        howm
         session
         paredit
         rainbow-delimiters

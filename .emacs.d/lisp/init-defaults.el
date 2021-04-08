@@ -73,7 +73,7 @@
 (setq x-selection-timeout 300)
 
 ;; use nice font
-(set-frame-font "Monospace-11")
+(set-frame-font "Monospace-13")
 ;(set-frame-font "Bitstream Vera Sans Mono-15")
 ;(set-frame-font "Fantasque Sans Mono-17")
 

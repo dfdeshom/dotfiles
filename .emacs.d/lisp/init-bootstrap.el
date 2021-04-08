@@ -25,6 +25,7 @@
     ;init-sqli
     init-elpy
     init-defaults
+    init-howm
     ;; custom-functions
 ))
 

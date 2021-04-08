@@ -1,7 +1,7 @@
 ;; add flycheck-mode, but only for writing
 ;; and editing elisp
 
-;; (require 'flycheck)
+(require 'flycheck)
 ;; (require 'elpy)
 
 ;; (setq flycheck-python-pylint-executable "/home/dfdeshom/.local/bin/pylint")
@@ -16,9 +16,6 @@
 ;; ;(eval-after-load 'flycheck
 ;; ;      '(flycheck-package-setup))
 
-;; (when (load "flycheck" t t)
-;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (provide 'init-flycheck)
 
