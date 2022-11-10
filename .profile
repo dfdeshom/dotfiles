@@ -37,3 +37,6 @@ fi
 # disable touchpad almost everywhere 
 synclient AreaBottomEdge=100
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
