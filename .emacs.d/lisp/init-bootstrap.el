@@ -26,6 +26,7 @@
     init-elpy
     init-defaults
     init-howm
+    init-perspective
     ;; custom-functions
 ))
 
